@@ -47,6 +47,14 @@ _PAT_ALREADY_NORM = re.compile(r"^\s*(\d{4})-(\d{2})\s*$")                      
 # force-parsed). Extend this set as new anomalies are discovered.
 _REJECT_EXACT = {"ttm", "n/a", "na", "-", ""}
 
+# Known ticker typos found during Day 06 manual review, mapped to the
+# correct company_id in companies.xlsx. 'AGTL' appears 7x in cashflow.xlsx
+# but does not exist in companies.xlsx; 'ATGL' (Adani Total Gas Ltd) *does*
+# exist and was showing 0yr of cashflow coverage in DQ-16 -- a letter
+# transposition, not a genuinely orphaned row. Extend this map as new
+# typos are discovered rather than silently dropping/force-matching others.
+_TICKER_ALIASES = {"AGTL": "ATGL"}
+
 
 def normalize_year(raw_year, default_month: str = "03") -> str | None:
     """
@@ -137,6 +145,9 @@ def normalize_ticker(raw_id) -> str | None:
     s = str(raw_id).strip().upper()
     if not s or s.upper() in {"MISSING", "NAN", "NONE"}:
         return None
+    if s in _TICKER_ALIASES:
+        logger.info("normalize_ticker: corrected known typo %r -> %r", s, _TICKER_ALIASES[s])
+        s = _TICKER_ALIASES[s]
     if not (2 <= len(s) <= 12):
         logger.warning("normalize_ticker: length out of range for %r", raw_id)
         return None

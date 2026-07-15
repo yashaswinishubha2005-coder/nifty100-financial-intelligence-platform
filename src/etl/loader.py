@@ -47,7 +47,7 @@ CORE_FILES = {
     "balancesheet":  {"path": "data/raw/balancesheet.xlsx",  "header": 1, "ticker_col": "company_id",  "year_col": "year"},
     "cashflow":      {"path": "data/raw/cashflow.xlsx",      "header": 1, "ticker_col": "company_id",  "year_col": "year"},
     "analysis":      {"path": "data/raw/analysis.xlsx",      "header": 1, "ticker_col": "company_id",  "year_col": None},
-    "documents":     {"path": "data/raw/documents.xlsx",     "header": 1, "ticker_col": "company_id",  "year_col": None},  # 'Year' col handled separately (int, not fiscal label)
+    "documents":     {"path": "data/raw/documents.xlsx",     "header": 1, "ticker_col": "company_id",  "year_col": None, "dedup_subset": ["company_id", "Year"], "prefer_notna": "Annual_Report"},  # 'Year' col handled separately (int, not fiscal label)
     "prosandcons":   {"path": "data/raw/prosandcons.xlsx",   "header": 1, "ticker_col": "company_id",  "year_col": None},
 }
 
@@ -55,7 +55,7 @@ SUPPORTING_FILES = {
     "sectors":          {"path": "data/supporting/sectors.xlsx",          "header": 0, "ticker_col": "company_id", "year_col": None},
     "stock_prices":     {"path": "data/supporting/stock_prices.xlsx",     "header": 0, "ticker_col": "company_id", "year_col": None},  # has 'date', not fiscal 'year'
     "market_cap":       {"path": "data/supporting/market_cap.xlsx",       "header": 0, "ticker_col": "company_id", "year_col": None},  # 'year' here is calendar int, not fiscal label
-    "financial_ratios": {"path": "data/supporting/financial_ratios.xlsx", "header": 0, "ticker_col": "company_id", "year_col": None},
+    "financial_ratios": {"path": "data/supporting/financial_ratios.xlsx", "header": 0, "ticker_col": "company_id", "year_col": "year"},  # FIX (Day 06): raw labels are fiscal ('Mar 2014' etc), same as P&L/BS/CF -- must be normalised to YYYY-MM and deduped, else joins to those tables silently fail and 119 dup (company_id, year) rows survive
     "peer_groups":      {"path": "data/supporting/peer_groups.xlsx",      "header": 0, "ticker_col": "company_id", "year_col": None},
 }
 
@@ -132,6 +132,21 @@ def load_excel_file(name: str, cfg: dict) -> tuple[pd.DataFrame, dict]:
         dup_count = before - len(df)
         if dup_count:
             logger.info("%s: removed %d duplicate (%s, %s) rows", name, dup_count, ticker_col, year_col)
+
+    # --- Explicit dedup_subset (for tables whose year field isn't a fiscal
+    # label normalised above, e.g. documents.Year is a plain calendar int) ----
+    dedup_subset = cfg.get("dedup_subset")
+    if dedup_subset and set(dedup_subset).issubset(df.columns):
+        before = len(df)
+        prefer_col = cfg.get("prefer_notna")
+        if prefer_col and prefer_col in df.columns:
+            # keep the row with a non-null value in prefer_col when duplicates
+            # differ only in that column (e.g. a null Annual_Report vs a real one)
+            df = df.sort_values(by=prefer_col, key=lambda s: s.isna(), kind="stable")
+        df = df.drop_duplicates(subset=dedup_subset, keep="first")
+        dup_count = before - len(df)
+        if dup_count:
+            logger.info("%s: removed %d duplicate %s rows (dedup_subset)", name, dup_count, dedup_subset)
 
     rows_out = len(df)
     runtime_s = round(time.time() - start, 3)
