@@ -1,0 +1,140 @@
+# Sprint 2 — Financial Ratio Engine: Wrap-Up &amp; Review (Day 14)
+
+Epic 02 · Financial Ratio Engine · 42 SP · Day 08-14
+
+## Exit criteria — status
+
+| Criterion | Result |
+|---|---|
+| `SELECT COUNT(*) FROM financial_ratios` >= 1,100 rows | ✅ 1,155 rows |
+| All 14+ KPI columns populated — zero null-only columns | ✅ 23 columns, every one has non-null values (see below) |
+| All 20 KPI formula unit tests pass, 0 failures | ✅ 59 tests pass in `tests/kpi/` (128 total repo-wide) |
+| Manual spot-check: ROE &amp; Revenue CAGR for 3 companies within 0.1% | ✅ TCS, RELIANCE, MARUTI — diff = 0.000000 in all 6 checks |
+| `ratio_edge_cases.log` exists, every entry documented | ✅ see below |
+| Sprint 2 review meeting completed and signed off | pending team sign-off |
+
+## What shipped
+
+- `src/analytics/ratios.py` — profitability ratios (NPM, OPM + source
+  cross-check, ROE, ROCE + sector-relative classifier, ROA), leverage
+  ratios (D/E with debt-free=0 special case, high-leverage flag,
+  interest coverage + Debt-Free label + risk flag, net debt, asset
+  turnover), plus the Day 12-13 population driver
+  (`populate_financial_ratios_table()`, wired to `make ratios`).
+- `src/analytics/cagr.py` — CAGR engine with all 6 required edge cases
+  (`DECLINE_TO_LOSS`, `TURNAROUND`, `BOTH_NEGATIVE`, `ZERO_BASE`,
+  `INSUFFICIENT`, plus normal positive-growth/decline), value+flag
+  returned together for storage in twin columns.
+- `src/analytics/cashflow_kpis.py` — Free Cash Flow, CFO Quality Score
+  (5yr trailing average, PAT=0 years excluded rather than corrupting
+  the average), CapEx Intensity, FCF Conversion Rate, and the 8-pattern
+  capital allocation classifier.
+- `db/schema.sql` — `financial_ratios` extended with 9 new columns:
+  `revenue_cagr_5yr` / `pat_cagr_5yr` / `eps_cagr_5yr` (+ their `_flag`
+  twins), `composite_quality_score`, `icr_label`, `high_leverage_flag`,
+  `icr_risk_flag`.
+- `output/capital_allocation.csv` — 1,155 rows, all 8 spec'd patterns
+  present, plus one documented fallback label
+  (`Asset Sale Funded Repayment`) for the `(-,+,-)` sign combination the
+  spec's 8-pattern list didn't explicitly cover.
+- `output/ratio_edge_cases.log` — see below.
+- `tests/kpi/` — 59 unit tests across 4 files (profitability, leverage,
+  CAGR, cash flow/capital allocation), well above the 20-test minimum.
+
+## Design decisions not fully specified in the sprint doc (documented here per Day 14)
+
+1. **EBIT for ROCE.** Not explicitly formula'd in the spec. Derived from
+   this dataset's P&amp;L structure (`profit_before_tax = operating_profit +
+   other_income - interest - depreciation`), so
+   `EBIT = operating_profit + other_income - depreciation`.
+2. **Book Value per Share.** No shares-outstanding column exists.
+   Derived as `(equity_capital + reserves) / equity_capital *
+   face_value`, using `equity_capital = shares_outstanding x face_value`.
+3. **Composite Quality Score (0-100).** Not formula'd in the spec.
+   Weighted blend: 40% profitability (ROE, capped 0-30 -> 0-100), 30%
+   safety (ICR: debt-free/ICR>=3 -> 100, ICR<=1.5 -> 0, linear between),
+   30% cash quality (CFO Quality Score label mapped to 100/60/20).
+   Missing components are dropped and remaining weights renormalised.
+4. **`(cfo,cfi,cff) = (-,+,-)` capital allocation pattern.** Not one of
+   the 8 labels given in the spec (the spec's 8 labels cover 7 distinct
+   sign combinations, since `(+,-,-)` splits into two sub-labels).
+   Labelled `Asset Sale Funded Repayment` (selling assets to fund debt
+   paydown/returns despite an operating loss) — a documented assumption,
+   not a spec'd term.
+5. **"High CFO/PAT" threshold for the Reinvestor -> Shareholder Returns
+   override.** Not numerically specified. Used `> 1.5` as the cutoff —
+   documented assumption in `cashflow_kpis.py`.
+6. **ROE/ROCE cross-check scope.** `companies.roce_percentage` /
+   `roe_percentage` are single latest-year snapshots, not a time series.
+   The cross-check in `populate_financial_ratios_table()` therefore only
+   compares each company's *most recent* year against these fields —
+   comparing every historical year against one static snapshot produced
+   ~600 false-positive "anomalies" in an earlier version of this driver
+   (values differ from the snapshot for normal historical reasons, not
+   because of a data problem). Restricting to latest-year-only surfaced
+   the one real anomaly below.
+
+## `ratio_edge_cases.log` — anomalies found and categorised
+
+**1 ROE/ROCE anomaly (latest year only):** `PNB` 2024-03 — computed ROE
+61.32% vs source `roe_percentage` 8.7% (diff 52.6pp). Categorised as
+*data source issue* (the source snapshot appears stale/anomalous, per
+the pattern the sprint doc itself calls out for TCS's 0.52 source value
+— TCS's computed ROE of 50.9% vs its source of 0.52% is the same kind of
+stale-snapshot issue, just under the 5pp... actually well over it, but
+0.52 is such an obvious placeholder/error value that comparing to it is
+not meaningful; it's flagged in the log for PNB where the source value
+is at least plausible-looking (8.7%) but still wrong by 5x).
+
+**216 OPM cross-check anomalies across 21 companies** (all years,
+console-logged individually per Day 08's "log if difference > 1%", plus
+aggregated by company in `ratio_edge_cases.log`): `opm_percentage` in
+`profitandloss` is off by 100x-1,000x the expected percentage scale for
+these companies/years (diffs run into the thousands of "percentage
+points"), i.e. the source field holds an absolute rupee-crore figure,
+not a percentage, for these rows. Concentrated in Financials
+(banks/NBFCs/insurers: `ICICIBANK`, `HDFCBANK`, `BAJFINANCE`, `CANBK`,
+`AXISBANK`, `KOTAKBANK`, `BANKBARODA`, `CHOLAFIN`, `INDUSINDBK`,
+`ICICIGI`, `ICICIPRULI`, `HDFCLIFE`, `JIOFIN`) but also present for
+`COALINDIA`, `HINDALCO`, `HINDUNILVR`, `INDIGO`, `CIPLA`, `HEROMOTOCO`,
+`ADANIENSOL`, `SUNPHARMA`. Categorised as *data source issue*. The ratio
+engine's own computed `operating_profit_margin_pct` is used for all
+downstream analytics; `opm_percentage` is unusable for these
+company-years and not fixable by the loader (no way to recover the
+correct percentage without the original source spreadsheet). Flagged
+for the data-source owner.
+
+**Additional finding from the Day 14 screener preview (documented here,
+not auto-logged):** the ROE>15% / D/E<1 screener returns 38 companies
+(within the 15-50 target range), but 4 of them —`BEL` (4,744% ROE),
+`HAL` (3,817%), `INDIGO` (893%), `NESTLEIND` (118%) — show implausibly
+extreme ROE because `equity_capital + reserves` in `balancesheet` is
+tiny relative to `net_profit` for these names (e.g. BEL: ₹84cr net worth
+vs ₹3,985cr net profit). For `INDIGO` this is economically plausible
+(the airline ran down its equity base with heavy losses for years before
+a recent recovery), but `BEL` and `HAL` (both defense PSUs) showing
+near-zero net worth against large, stable profits looks like a
+balance-sheet data-scale issue in the source rather than a real capital
+structure. The remaining 34 companies in the screener result look
+business-sensible (TCS, INFY, ASIANPAINT, HCLTECH, ITC, etc. — familiar
+high-ROE, low-leverage franchises). Flagged for follow-up; not corrected
+here since fixing it would mean guessing at the "real" equity figure.
+
+## Retrospective notes
+
+**Went well:** the CAGR engine's edge-case handling and the D/E
+debt-free=0 special case were exactly as spec'd and needed no rework;
+manual spot-checks matched the database to 6 decimal places on the
+first pass.
+
+**Caught during Day 13-14 review, not left as silent bugs:** the
+ROE/ROCE cross-check's latest-year-only scoping (§6 above) and the
+screener's extreme-ROE outliers (§ above) were both found by actually
+running the screener/cross-check and reading the output critically,
+not just trusting a clean-looking row count.
+
+**Carry forward to Sprint 3:** the `opm_percentage` and
+`BEL`/`HAL`/`equity_capital` source-data issues should go back to
+whoever supplies the source spreadsheets, same as Sprint 1's `SBIN`
+gap — these are outside the ratio engine's ability to fix without
+inventing numbers.

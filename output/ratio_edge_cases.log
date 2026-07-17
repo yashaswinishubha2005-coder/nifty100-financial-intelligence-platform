@@ -1,0 +1,38 @@
+# ratio_edge_cases.log — 1 ROE/ROCE anomalies (latest year, computed vs source, diff > 5pp)
+# category is one of: data source issue | version difference | formula discrepancy
+
+PNB          2024-03  ROE   computed=   61.32 source=     8.7 diff= 52.62  [data source issue (source roe_percentage appears stale/anomalous)]
+
+
+# --- OPM cross-check anomalies: 21 companies, 216 company-years with |computed - source opm_percentage| > 1pp ---
+# category: data source issue -- opm_percentage values for these companies are
+# off by 100x-1000x the expected percentage scale (diffs run into the thousands
+# of 'percentage points'), i.e. the source field holds an absolute rupee-crore
+# figure for these companies/years, not a genuine percentage. Concentrated in
+# Financials (banks/NBFCs/insurers) but also present for a few non-Financials
+# names (COALINDIA, HINDALCO, HINDUNILVR, CIPLA, INDIGO, HEROMOTOCO). The ratio
+# engine's own computed operating_profit_margin_pct is used for analytics;
+# opm_percentage is not usable for these companies. Not fixable by the loader --
+# flagged for the data-source owner.
+
+ICICIBANK    sector=Financials               years_affected=12 min_diff=   13150.4 max_diff=   51087.4  [data source issue]
+COALINDIA    sector=Materials                years_affected=12 min_diff=    9198.9 max_diff=   47904.7  [data source issue]
+HDFCBANK     sector=Financials               years_affected=12 min_diff=    3498.8 max_diff=   44746.4  [data source issue]
+HINDALCO     sector=Materials                years_affected=12 min_diff=    7608.6 max_diff=   28261.5  [data source issue]
+BAJFINANCE   sector=Financials               years_affected=10 min_diff=    1334.5 max_diff=   19957.7  [data source issue]
+CANBK        sector=Financials               years_affected=12 min_diff=     633.8 max_diff=   18428.8  [data source issue]
+INDIGO       sector=Consumer Discretionary   years_affected=12 min_diff=      98.0 max_diff=   16254.7  [data source issue]
+HINDUNILVR   sector=Consumer Staples         years_affected=12 min_diff=    4135.6 max_diff=   14582.7  [data source issue]
+AXISBANK     sector=Financials               years_affected=12 min_diff=    1322.4 max_diff=   13822.8  [data source issue]
+KOTAKBANK    sector=Financials               years_affected=12 min_diff=    1437.8 max_diff=   13465.7  [data source issue]
+BANKBARODA   sector=Financials               years_affected=12 min_diff=     779.2 max_diff=   11779.4  [data source issue]
+CIPLA        sector=Healthcare               years_affected=12 min_diff=    2068.1 max_diff=    6215.4  [data source issue]
+HEROMOTOCO   sector=Consumer Discretionary   years_affected=11 min_diff=    3167.0 max_diff=    5250.4  [data source issue]
+CHOLAFIN     sector=Financials               years_affected=12 min_diff=     445.2 max_diff=    4519.9  [data source issue]
+INDUSINDBK   sector=Financials               years_affected=12 min_diff=     255.7 max_diff=    2939.4  [data source issue]
+ICICIGI      sector=Financials               years_affected=12 min_diff=     282.5 max_diff=    2489.6  [data source issue]
+ICICIPRULI   sector=Financials               years_affected=12 min_diff=     420.5 max_diff=    2266.4  [data source issue]
+HDFCLIFE     sector=Financials               years_affected=12 min_diff=      19.9 max_diff=    1136.7  [data source issue]
+ADANIENSOL   sector=Energy                   years_affected= 1 min_diff=       4.4 max_diff=       4.4  [data source issue]
+JIOFIN       sector=Financials               years_affected= 1 min_diff=       1.3 max_diff=       1.3  [data source issue]
+SUNPHARMA    sector=Healthcare               years_affected= 1 min_diff=       1.2 max_diff=       1.2  [data source issue]

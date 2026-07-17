@@ -204,6 +204,18 @@ CREATE TABLE IF NOT EXISTS financial_ratios (
     dividend_payout_ratio_pct       REAL,
     total_debt_cr                   REAL,
     cash_from_operations_cr         REAL,
+    -- Sprint 2 (Day 12) additions: CAGR engine outputs + composite score
+    revenue_cagr_5yr                REAL,
+    revenue_cagr_5yr_flag           TEXT,
+    pat_cagr_5yr                    REAL,
+    pat_cagr_5yr_flag               TEXT,
+    eps_cagr_5yr                    REAL,
+    eps_cagr_5yr_flag               TEXT,
+    composite_quality_score         REAL,
+    -- Sprint 2 (Day 09) additions: flags/labels the spec asks to persist
+    icr_label                        TEXT,
+    high_leverage_flag              INTEGER,
+    icr_risk_flag                   INTEGER,
     UNIQUE (company_id, year)
 );
 CREATE INDEX IF NOT EXISTS idx_financial_ratios_company ON financial_ratios(company_id);
