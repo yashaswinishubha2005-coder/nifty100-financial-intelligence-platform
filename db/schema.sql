@@ -233,3 +233,23 @@ CREATE TABLE IF NOT EXISTS peer_groups (
     UNIQUE (peer_group_name, company_id)
 );
 CREATE INDEX IF NOT EXISTS idx_peer_groups_company ON peer_groups(company_id);
+
+-- ----------------------------------------------------------------------------
+-- peer_percentiles — Sprint 3, Day 18 deliverable (Epic 04, Module 2).
+-- One row per (company, peer_group, metric, year): the company's raw
+-- metric value plus its percentile rank (0-100) within that peer group
+-- for that year. D/E is stored already inverted (see src/analytics/peer.py)
+-- so that percentile_rank is always "higher = better" for every metric.
+-- ----------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS peer_percentiles (
+    id                  INTEGER PRIMARY KEY AUTOINCREMENT,
+    company_id          TEXT    NOT NULL REFERENCES companies(id),
+    peer_group_name     TEXT    NOT NULL,
+    metric               TEXT    NOT NULL,
+    value                REAL,
+    percentile_rank      REAL,
+    year                 TEXT    NOT NULL,
+    UNIQUE (company_id, peer_group_name, metric, year)
+);
+CREATE INDEX IF NOT EXISTS idx_peer_percentiles_company ON peer_percentiles(company_id);
+CREATE INDEX IF NOT EXISTS idx_peer_percentiles_group ON peer_percentiles(peer_group_name);
