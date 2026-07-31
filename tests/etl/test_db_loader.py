@@ -2,7 +2,7 @@
 tests/etl/test_db_loader.py — Unit tests for db_loader.py (src/etl/db_loader.py).
 
 Covers Sprint 1, Day 04-05 acceptance criteria:
-    - Schema creation (13 tables from db/schema.sql, incl. Sprint 3's peer_percentiles)
+    - Schema creation (14 tables from db/schema.sql, incl. Sprint 3's peer_percentiles and Sprint 4's valuation)
     - DQ-03 FK enforcement: orphan company_id rows are rejected, not inserted
     - AC-03: PRAGMA foreign_key_check returns 0 rows after load
     - load_audit.csv reflects rows_in / rows_out / fk_rejected / final_db_count
@@ -98,9 +98,9 @@ def tmp_project(tmp_path, monkeypatch):
 
 class TestSchemaCreation:
 
-    def test_build_schema_creates_all_13_tables(self, tmp_project):
+    def test_build_schema_creates_all_14_tables(self, tmp_project):
         # 12 tables from Sprint 1 (one per source file) + peer_percentiles
-        # added in Sprint 3, Day 18 (src/analytics/peer.py).
+        # (Sprint 3, Day 18) + valuation (Sprint 4, Day 26).
         conn = sqlite3.connect(":memory:")
         conn.execute("PRAGMA foreign_keys = ON;")
         build_schema(conn)
@@ -109,7 +109,8 @@ class TestSchemaCreation:
         for table_cfg in TABLE_MAP.values():
             assert table_cfg["sqlite_table"] in tables
         assert "peer_percentiles" in tables
-        assert len(tables) == 13
+        assert "valuation" in tables
+        assert len(tables) == 14
 
     def test_companies_table_has_primary_key_on_id(self, tmp_project):
         conn = sqlite3.connect(":memory:")

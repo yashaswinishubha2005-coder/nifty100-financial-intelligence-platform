@@ -253,3 +253,24 @@ CREATE TABLE IF NOT EXISTS peer_percentiles (
 );
 CREATE INDEX IF NOT EXISTS idx_peer_percentiles_company ON peer_percentiles(company_id);
 CREATE INDEX IF NOT EXISTS idx_peer_percentiles_group ON peer_percentiles(peer_group_name);
+
+-- ----------------------------------------------------------------------------
+-- valuation — Sprint 4, Day 26 deliverable (Epic 06, Module 1). One row
+-- per company (latest year): valuation multiples, FCF yield, the
+-- sector's median P/E for that year, and the resulting Caution /
+-- Discount / Fair flag. Mirrors output/valuation_summary.xlsx.
+-- ----------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS valuation (
+    id                          INTEGER PRIMARY KEY AUTOINCREMENT,
+    company_id                  TEXT    NOT NULL REFERENCES companies(id),
+    year                         INTEGER NOT NULL,
+    pe_ratio                    REAL,
+    pb_ratio                    REAL,
+    ev_ebitda                   REAL,
+    fcf_yield_pct                REAL,
+    sector_median_pe             REAL,
+    pe_vs_sector_median_pct      REAL,
+    flag                         TEXT,
+    UNIQUE (company_id, year)
+);
+CREATE INDEX IF NOT EXISTS idx_valuation_company ON valuation(company_id);
