@@ -9,6 +9,7 @@ streamlit>=1.30
 fastapi>=0.110
 uvicorn>=0.27
 reportlab>=4.1
+pypdf>=4.0
 nltk>=3.8
 pytest>=7.4
 jupyter>=1.0

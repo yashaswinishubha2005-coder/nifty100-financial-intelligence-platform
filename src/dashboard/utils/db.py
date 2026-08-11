@@ -237,18 +237,40 @@ def get_peer_group_names() -> list[str]:
 
 
 @st.cache_data(ttl=600)
-def get_screener_universe() -> pd.DataFrame:
+def get_screener_universe() -> tuple[pd.DataFrame, dict]:
     """The Sprint 3 screener engine's universe + composite quality score
     (src/screener/engine.py's build_universe + compute_composite_scores),
     reused as-is so the Screener screen's numbers match
     output/screener_output.xlsx exactly rather than recomputing a
-    second, slightly different composite score."""
-    import sys
-    from pathlib import Path
-    PROJECT_ROOT = Path(__file__).resolve().parents[2]
-    sys.path.append(str(PROJECT_ROOT / "nlp"))
+    second, slightly different composite score.
 
-    import engine as screener_engine
+    Returns a `(universe, config)` tuple, not a single DataFrame.
+    """
+    import importlib
+    import importlib.util
+    import sys
+
+    # db.py lives under src/dashboard/utils; the project root is three
+    # levels above the file and the screener package is two levels above.
+    PROJECT_ROOT = Path(__file__).resolve().parents[3]
+    SCREENER_ROOT = Path(__file__).resolve().parents[2] / "screener"
+
+    # Keep the screener package importable for the runtime loader.
+    if str(SCREENER_ROOT) not in sys.path:
+        sys.path.insert(0, str(SCREENER_ROOT))
+
+    # The screener engine may live under src/screener/engine.py; prefer a
+    # dynamic import so static tooling and runtime both see the same file.
+    try:
+        screener_engine = importlib.import_module("engine")
+    except ModuleNotFoundError:
+        engine_spec = importlib.util.spec_from_file_location(
+            "engine", SCREENER_ROOT / "engine.py"
+        )
+        if engine_spec is None or engine_spec.loader is None:
+            raise
+        screener_engine = importlib.util.module_from_spec(engine_spec)
+        engine_spec.loader.exec_module(screener_engine)
 
     conn = _get_connection()
     config = screener_engine.load_config()

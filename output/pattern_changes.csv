@@ -1,0 +1,517 @@
+company_id,from_year,to_year,from_pattern,to_pattern
+ABB,2012-12,2014-03,Reinvestor,Cash Accumulator
+ABB,2014-03,2015-03,Cash Accumulator,Growth Funded by Debt
+ABB,2015-03,2016-03,Growth Funded by Debt,Shareholder Returns
+ABB,2017-03,2018-03,Shareholder Returns,Mixed
+ABB,2020-03,2021-03,Mixed,Shareholder Returns
+ABB,2022-03,2023-03,Shareholder Returns,Mixed
+ABB,2023-03,2024-03,Mixed,Shareholder Returns
+ADANIENSOL,2014-03,2015-03,Cash Accumulator,Growth Funded by Debt
+ADANIENSOL,2015-03,2016-03,Growth Funded by Debt,Shareholder Returns
+ADANIENSOL,2017-03,2018-03,Shareholder Returns,Mixed
+ADANIENSOL,2020-03,2021-03,Mixed,Shareholder Returns
+ADANIENSOL,2022-03,2023-03,Shareholder Returns,Mixed
+ADANIENSOL,2023-03,2024-03,Mixed,Shareholder Returns
+ADANIENT,2013-03,2014-03,Mixed,Shareholder Returns
+ADANIENT,2014-03,2015-03,Shareholder Returns,Mixed
+ADANIENT,2015-03,2016-03,Mixed,Shareholder Returns
+ADANIENT,2016-03,2017-03,Shareholder Returns,Mixed
+ADANIENT,2018-03,2019-03,Mixed,Liquidating Assets
+ADANIENT,2019-03,2020-03,Liquidating Assets,Shareholder Returns
+ADANIENT,2020-03,2021-03,Shareholder Returns,Mixed
+ADANIENT,2022-03,2023-03,Mixed,Shareholder Returns
+ADANIENT,2023-03,2024-03,Shareholder Returns,Mixed
+ADANIGREEN,2022-03,2023-03,Mixed,Shareholder Returns
+ADANIGREEN,2023-03,2024-03,Shareholder Returns,Mixed
+ADANIPORTS,2014-03,2015-03,Mixed,Reinvestor
+ADANIPORTS,2015-03,2016-03,Reinvestor,Mixed
+ADANIPORTS,2016-03,2017-03,Mixed,Reinvestor
+ADANIPORTS,2017-03,2018-03,Reinvestor,Shareholder Returns
+ADANIPORTS,2018-03,2019-03,Shareholder Returns,Mixed
+ADANIPORTS,2019-03,2020-03,Mixed,Shareholder Returns
+ADANIPORTS,2020-03,2021-03,Shareholder Returns,Mixed
+ADANIPORTS,2021-03,2022-03,Mixed,Shareholder Returns
+ADANIPOWER,2014-03,2015-03,Mixed,Reinvestor
+ADANIPOWER,2015-03,2016-03,Reinvestor,Shareholder Returns
+ADANIPOWER,2016-03,2017-03,Shareholder Returns,Reinvestor
+ADANIPOWER,2020-03,2021-03,Reinvestor,Shareholder Returns
+ADANIPOWER,2021-03,2022-03,Shareholder Returns,Liquidating Assets
+AMBUJACEM,2014-12,2015-12,Reinvestor,Shareholder Returns
+AMBUJACEM,2017-12,2018-12,Shareholder Returns,Reinvestor
+AMBUJACEM,2018-12,2019-12,Reinvestor,Shareholder Returns
+AMBUJACEM,2020-12,2021-12,Shareholder Returns,Reinvestor
+AMBUJACEM,2021-12,2023-03,Reinvestor,Mixed
+APOLLOHOSP,2013-03,2014-03,Mixed,Reinvestor
+APOLLOHOSP,2014-03,2015-03,Reinvestor,Mixed
+APOLLOHOSP,2017-03,2018-03,Mixed,Shareholder Returns
+ATGL,2018-03,2019-03,Mixed,Liquidating Assets
+ATGL,2019-03,2020-03,Liquidating Assets,Reinvestor
+ATGL,2020-03,2021-03,Reinvestor,Mixed
+ATGL,2023-03,2024-03,Mixed,Reinvestor
+AXISBANK,2014-03,2015-03,Mixed,Growth Funded by Debt
+AXISBANK,2015-03,2016-03,Growth Funded by Debt,Distress Signal
+AXISBANK,2016-03,2017-03,Distress Signal,Shareholder Returns
+AXISBANK,2017-03,2018-03,Shareholder Returns,Growth Funded by Debt
+AXISBANK,2018-03,2019-03,Growth Funded by Debt,Mixed
+AXISBANK,2023-03,2024-03,Mixed,Growth Funded by Debt
+BAJAJ-AUTO,2019-03,2020-03,Reinvestor,Liquidating Assets
+BAJAJ-AUTO,2020-03,2021-03,Liquidating Assets,Reinvestor
+BAJAJ-AUTO,2021-03,2022-03,Reinvestor,Liquidating Assets
+BAJAJ-AUTO,2023-03,2024-03,Liquidating Assets,Reinvestor
+BAJAJFINSV,2015-03,2016-03,Distress Signal,Growth Funded by Debt
+BAJAJFINSV,2016-03,2017-03,Growth Funded by Debt,Distress Signal
+BAJAJFINSV,2017-03,2018-03,Distress Signal,Growth Funded by Debt
+BAJAJFINSV,2020-03,2021-03,Growth Funded by Debt,Mixed
+BAJAJFINSV,2021-03,2022-03,Mixed,Distress Signal
+BAJAJFINSV,2022-03,2023-03,Distress Signal,Growth Funded by Debt
+BAJAJHLDNG,2015-03,2016-03,Reinvestor,Liquidating Assets
+BAJAJHLDNG,2016-03,2017-03,Liquidating Assets,Pre-Revenue
+BAJAJHLDNG,2017-03,2018-03,Pre-Revenue,Reinvestor
+BAJFINANCE,2017-03,2018-03,Growth Funded by Debt,Distress Signal
+BAJFINANCE,2018-03,2019-03,Distress Signal,Growth Funded by Debt
+BAJFINANCE,2021-03,2022-03,Growth Funded by Debt,Distress Signal
+BAJFINANCE,2022-03,2023-03,Distress Signal,Growth Funded by Debt
+BANKBARODA,2013-03,2014-03,Shareholder Returns,Mixed
+BANKBARODA,2014-03,2015-03,Mixed,Shareholder Returns
+BANKBARODA,2015-03,2016-03,Shareholder Returns,Pre-Revenue
+BANKBARODA,2016-03,2017-03,Pre-Revenue,Shareholder Returns
+BANKBARODA,2017-03,2018-03,Shareholder Returns,Growth Funded by Debt
+BANKBARODA,2019-03,2020-03,Growth Funded by Debt,Mixed
+BANKBARODA,2020-03,2021-03,Mixed,Pre-Revenue
+BANKBARODA,2021-03,2022-03,Pre-Revenue,Reinvestor
+BANKBARODA,2022-03,2023-03,Reinvestor,Pre-Revenue
+BANKBARODA,2023-03,2024-03,Pre-Revenue,Growth Funded by Debt
+BEL,2014-03,2015-03,Asset Sale Funded Repayment,Reinvestor
+BEL,2015-03,2016-03,Reinvestor,Shareholder Returns
+BEL,2016-03,2017-03,Shareholder Returns,Asset Sale Funded Repayment
+BEL,2017-03,2018-03,Asset Sale Funded Repayment,Pre-Revenue
+BEL,2018-03,2019-03,Pre-Revenue,Reinvestor
+BEL,2020-03,2021-03,Reinvestor,Shareholder Returns
+BEL,2022-03,2023-03,Shareholder Returns,Liquidating Assets
+BEL,2023-03,2024-03,Liquidating Assets,Reinvestor
+BHARTIARTL,2013-03,2014-03,Shareholder Returns,Mixed
+BHARTIARTL,2014-03,2015-03,Mixed,Shareholder Returns
+BHARTIARTL,2017-03,2018-03,Shareholder Returns,Mixed
+BHARTIARTL,2020-03,2021-03,Mixed,Reinvestor
+BHARTIARTL,2021-03,2022-03,Reinvestor,Shareholder Returns
+BHEL,2014-03,2015-03,Mixed,Liquidating Assets
+BHEL,2016-03,2017-03,Liquidating Assets,Reinvestor
+BHEL,2017-03,2018-03,Reinvestor,Liquidating Assets
+BHEL,2018-03,2019-03,Liquidating Assets,Asset Sale Funded Repayment
+BHEL,2019-03,2020-03,Asset Sale Funded Repayment,Distress Signal
+BHEL,2020-03,2021-03,Distress Signal,Reinvestor
+BHEL,2022-03,2023-03,Reinvestor,Distress Signal
+BOSCHLTD,2016-03,2017-03,Reinvestor,Liquidating Assets
+BOSCHLTD,2017-03,2018-03,Liquidating Assets,Reinvestor
+BOSCHLTD,2018-03,2019-03,Reinvestor,Liquidating Assets
+BOSCHLTD,2019-03,2020-03,Liquidating Assets,Shareholder Returns
+BOSCHLTD,2021-03,2022-03,Shareholder Returns,Reinvestor
+BOSCHLTD,2022-03,2023-03,Reinvestor,Liquidating Assets
+BPCL,2015-03,2016-03,Shareholder Returns,Reinvestor
+BPCL,2016-03,2017-03,Reinvestor,Mixed
+BPCL,2017-03,2018-03,Mixed,Reinvestor
+BPCL,2018-03,2019-03,Reinvestor,Mixed
+BPCL,2020-03,2021-03,Mixed,Reinvestor
+BPCL,2021-03,2022-03,Reinvestor,Shareholder Returns
+BPCL,2023-03,2024-03,Shareholder Returns,Reinvestor
+BRITANNIA,2013-03,2014-03,Liquidating Assets,Shareholder Returns
+BRITANNIA,2014-03,2015-03,Shareholder Returns,Reinvestor
+BRITANNIA,2019-03,2020-03,Reinvestor,Mixed
+BRITANNIA,2020-03,2021-03,Mixed,Liquidating Assets
+BRITANNIA,2022-03,2023-03,Liquidating Assets,Reinvestor
+BRITANNIA,2023-03,2024-03,Reinvestor,Liquidating Assets
+CANBK,2015-03,2016-03,Shareholder Returns,Reinvestor
+CANBK,2016-03,2017-03,Reinvestor,Mixed
+CANBK,2017-03,2018-03,Mixed,Growth Funded by Debt
+CANBK,2018-03,2019-03,Growth Funded by Debt,Shareholder Returns
+CANBK,2019-03,2020-03,Shareholder Returns,Growth Funded by Debt
+CANBK,2020-03,2021-03,Growth Funded by Debt,Mixed
+CANBK,2022-03,2023-03,Mixed,Growth Funded by Debt
+CANBK,2023-03,2024-03,Growth Funded by Debt,Reinvestor
+CHOLAFIN,2013-03,2014-03,Distress Signal,Growth Funded by Debt
+CHOLAFIN,2021-03,2022-03,Growth Funded by Debt,Distress Signal
+CHOLAFIN,2022-03,2023-03,Distress Signal,Growth Funded by Debt
+CIPLA,2013-03,2014-03,Mixed,Reinvestor
+CIPLA,2014-03,2015-03,Reinvestor,Mixed
+CIPLA,2016-03,2017-03,Mixed,Shareholder Returns
+CIPLA,2017-03,2018-03,Shareholder Returns,Reinvestor
+CIPLA,2019-03,2020-03,Reinvestor,Liquidating Assets
+CIPLA,2020-03,2021-03,Liquidating Assets,Shareholder Returns
+CIPLA,2021-03,2022-03,Shareholder Returns,Reinvestor
+COALINDIA,2013-03,2014-03,Reinvestor,Liquidating Assets
+COALINDIA,2017-03,2018-03,Liquidating Assets,Shareholder Returns
+COALINDIA,2018-03,2019-03,Shareholder Returns,Reinvestor
+COALINDIA,2019-03,2020-03,Reinvestor,Liquidating Assets
+COALINDIA,2021-03,2022-03,Liquidating Assets,Shareholder Returns
+COALINDIA,2022-03,2023-03,Shareholder Returns,Reinvestor
+DABUR,2018-03,2019-03,Reinvestor,Liquidating Assets
+DABUR,2019-03,2020-03,Liquidating Assets,Reinvestor
+DIVISLAB,2016-03,2017-03,Reinvestor,Mixed
+DIVISLAB,2017-03,2018-03,Mixed,Reinvestor
+DIVISLAB,2020-03,2021-03,Reinvestor,Liquidating Assets
+DIVISLAB,2021-03,2022-03,Liquidating Assets,Reinvestor
+DLF,2015-03,2016-03,Liquidating Assets,Shareholder Returns
+DLF,2016-03,2017-03,Shareholder Returns,Distress Signal
+DLF,2017-03,2018-03,Distress Signal,Reinvestor
+DLF,2018-03,2019-03,Reinvestor,Cash Accumulator
+DLF,2019-03,2020-03,Cash Accumulator,Liquidating Assets
+DLF,2022-03,2023-03,Liquidating Assets,Reinvestor
+DLF,2023-03,2024-03,Reinvestor,Mixed
+DMART,2017-03,2018-03,Mixed,Liquidating Assets
+DMART,2018-03,2019-03,Liquidating Assets,Mixed
+DMART,2020-03,2021-03,Mixed,Reinvestor
+DRREDDY,2015-03,2016-03,Reinvestor,Shareholder Returns
+DRREDDY,2018-03,2019-03,Shareholder Returns,Reinvestor
+DRREDDY,2020-03,2021-03,Reinvestor,Shareholder Returns
+DRREDDY,2021-03,2022-03,Shareholder Returns,Reinvestor
+EICHERMOT,2016-03,2017-03,Reinvestor,Mixed
+EICHERMOT,2017-03,2018-03,Mixed,Reinvestor
+GAIL,2013-03,2014-03,Mixed,Reinvestor
+GAIL,2015-03,2016-03,Reinvestor,Shareholder Returns
+GAIL,2018-03,2019-03,Shareholder Returns,Reinvestor
+GAIL,2019-03,2020-03,Reinvestor,Mixed
+GAIL,2020-03,2021-03,Mixed,Reinvestor
+GAIL,2022-03,2023-03,Reinvestor,Mixed
+GAIL,2023-03,2024-03,Mixed,Reinvestor
+GODREJCP,2013-03,2014-03,Mixed,Reinvestor
+GODREJCP,2016-03,2017-03,Reinvestor,Mixed
+GODREJCP,2017-03,2018-03,Mixed,Reinvestor
+GODREJCP,2018-03,2019-03,Reinvestor,Liquidating Assets
+GODREJCP,2019-03,2020-03,Liquidating Assets,Reinvestor
+GODREJCP,2023-03,2024-03,Reinvestor,Mixed
+GRASIM,2013-03,2014-03,Mixed,Reinvestor
+GRASIM,2014-03,2015-03,Reinvestor,Shareholder Returns
+GRASIM,2017-03,2018-03,Shareholder Returns,Distress Signal
+GRASIM,2018-03,2019-03,Distress Signal,Growth Funded by Debt
+GRASIM,2019-03,2020-03,Growth Funded by Debt,Shareholder Returns
+GRASIM,2021-03,2022-03,Shareholder Returns,Reinvestor
+GRASIM,2022-03,2023-03,Reinvestor,Growth Funded by Debt
+HAL,2018-03,2019-03,Asset Sale Funded Repayment,Distress Signal
+HAL,2019-03,2020-03,Distress Signal,Mixed
+HAL,2020-03,2021-03,Mixed,Shareholder Returns
+HAL,2023-03,2024-03,Shareholder Returns,Reinvestor
+HAVELLS,2013-03,2014-03,Reinvestor,Shareholder Returns
+HAVELLS,2015-03,2016-03,Shareholder Returns,Reinvestor
+HAVELLS,2016-03,2017-03,Reinvestor,Shareholder Returns
+HAVELLS,2018-03,2019-03,Shareholder Returns,Liquidating Assets
+HAVELLS,2019-03,2020-03,Liquidating Assets,Reinvestor
+HAVELLS,2020-03,2021-03,Reinvestor,Mixed
+HAVELLS,2021-03,2022-03,Mixed,Reinvestor
+HAVELLS,2022-03,2023-03,Reinvestor,Liquidating Assets
+HAVELLS,2023-03,2024-03,Liquidating Assets,Shareholder Returns
+HCLTECH,2020-03,2021-03,Reinvestor,Shareholder Returns
+HCLTECH,2021-03,2022-03,Shareholder Returns,Liquidating Assets
+HCLTECH,2022-03,2023-03,Liquidating Assets,Reinvestor
+HDFCBANK,2013-03,2014-03,Growth Funded by Debt,Mixed
+HDFCBANK,2014-03,2015-03,Mixed,Growth Funded by Debt
+HDFCBANK,2016-03,2017-03,Growth Funded by Debt,Reinvestor
+HDFCBANK,2017-03,2018-03,Reinvestor,Mixed
+HDFCBANK,2018-03,2019-03,Mixed,Growth Funded by Debt
+HDFCBANK,2020-03,2021-03,Growth Funded by Debt,Reinvestor
+HDFCBANK,2021-03,2022-03,Reinvestor,Growth Funded by Debt
+HDFCBANK,2022-03,2023-03,Growth Funded by Debt,Mixed
+HDFCBANK,2023-03,2024-03,Mixed,Liquidating Assets
+HDFCLIFE,2019-03,2020-03,Shareholder Returns,Mixed
+HDFCLIFE,2021-03,2022-03,Mixed,Shareholder Returns
+HDFCLIFE,2022-03,2023-03,Shareholder Returns,Mixed
+HDFCLIFE,2023-03,2024-03,Mixed,Shareholder Returns
+HEROMOTOCO,2014-03,2015-03,Reinvestor,Liquidating Assets
+HEROMOTOCO,2015-03,2016-03,Liquidating Assets,Reinvestor
+HEROMOTOCO,2018-03,2019-03,Reinvestor,Liquidating Assets
+HEROMOTOCO,2019-03,2020-03,Liquidating Assets,Shareholder Returns
+HEROMOTOCO,2020-03,2021-03,Shareholder Returns,Reinvestor
+HINDALCO,2014-03,2015-03,Mixed,Shareholder Returns
+HINDALCO,2015-03,2016-03,Shareholder Returns,Reinvestor
+HINDALCO,2016-03,2017-03,Reinvestor,Shareholder Returns
+HINDALCO,2017-03,2018-03,Shareholder Returns,Liquidating Assets
+HINDALCO,2018-03,2019-03,Liquidating Assets,Shareholder Returns
+HINDALCO,2019-03,2020-03,Shareholder Returns,Mixed
+HINDALCO,2020-03,2021-03,Mixed,Shareholder Returns
+HINDALCO,2021-03,2022-03,Shareholder Returns,Reinvestor
+HINDALCO,2022-03,2023-03,Reinvestor,Shareholder Returns
+HINDUNILVR,2013-03,2014-03,Liquidating Assets,Reinvestor
+HINDUNILVR,2014-03,2015-03,Reinvestor,Liquidating Assets
+HINDUNILVR,2015-03,2016-03,Liquidating Assets,Reinvestor
+HINDUNILVR,2019-03,2020-03,Reinvestor,Liquidating Assets
+HINDUNILVR,2020-03,2021-03,Liquidating Assets,Reinvestor
+HINDUNILVR,2023-03,2024-03,Reinvestor,Shareholder Returns
+ICICIBANK,2014-03,2015-03,Mixed,Growth Funded by Debt
+ICICIBANK,2015-03,2016-03,Growth Funded by Debt,Mixed
+ICICIBANK,2016-03,2017-03,Mixed,Shareholder Returns
+ICICIBANK,2017-03,2018-03,Shareholder Returns,Mixed
+ICICIBANK,2018-03,2019-03,Mixed,Shareholder Returns
+ICICIBANK,2019-03,2020-03,Shareholder Returns,Mixed
+ICICIBANK,2020-03,2021-03,Mixed,Shareholder Returns
+ICICIBANK,2021-03,2022-03,Shareholder Returns,Mixed
+ICICIBANK,2022-03,2023-03,Mixed,Growth Funded by Debt
+ICICIBANK,2023-03,2024-03,Growth Funded by Debt,Mixed
+ICICIGI,2014-03,2015-03,Mixed,Asset Sale Funded Repayment
+ICICIGI,2015-03,2016-03,Asset Sale Funded Repayment,Reinvestor
+ICICIGI,2016-03,2017-03,Reinvestor,Mixed
+ICICIGI,2017-03,2018-03,Mixed,Shareholder Returns
+ICICIGI,2020-03,2021-03,Shareholder Returns,Reinvestor
+ICICIGI,2021-03,2022-03,Reinvestor,Liquidating Assets
+ICICIGI,2022-03,2023-03,Liquidating Assets,Reinvestor
+ICICIPRULI,2014-03,2015-03,Asset Sale Funded Repayment,Reinvestor
+ICICIPRULI,2015-03,2016-03,Reinvestor,Liquidating Assets
+ICICIPRULI,2016-03,2017-03,Liquidating Assets,Shareholder Returns
+ICICIPRULI,2020-03,2021-03,Shareholder Returns,Mixed
+ICICIPRULI,2021-03,2022-03,Mixed,Shareholder Returns
+ICICIPRULI,2022-03,2023-03,Shareholder Returns,Reinvestor
+ICICIPRULI,2023-03,2024-03,Reinvestor,Asset Sale Funded Repayment
+INDIGO,2014-03,2015-03,Mixed,Shareholder Returns
+INDIGO,2017-03,2018-03,Shareholder Returns,Mixed
+INDIGO,2018-03,2019-03,Mixed,Shareholder Returns
+INDIGO,2019-03,2020-03,Shareholder Returns,Reinvestor
+INDIGO,2020-03,2021-03,Reinvestor,Asset Sale Funded Repayment
+INDIGO,2021-03,2022-03,Asset Sale Funded Repayment,Liquidating Assets
+INDIGO,2022-03,2023-03,Liquidating Assets,Reinvestor
+INDIGO,2023-03,2024-03,Reinvestor,Shareholder Returns
+INDUSINDBK,2016-03,2017-03,Growth Funded by Debt,Shareholder Returns
+INDUSINDBK,2017-03,2018-03,Shareholder Returns,Growth Funded by Debt
+INDUSINDBK,2019-03,2020-03,Growth Funded by Debt,Distress Signal
+INDUSINDBK,2020-03,2021-03,Distress Signal,Shareholder Returns
+INDUSINDBK,2022-03,2023-03,Shareholder Returns,Growth Funded by Debt
+INDUSINDBK,2023-03,2024-03,Growth Funded by Debt,Pre-Revenue
+INFY,2014-03,2015-03,Reinvestor,Liquidating Assets
+INFY,2015-03,2016-03,Liquidating Assets,Reinvestor
+INFY,2017-03,2018-03,Reinvestor,Liquidating Assets
+INFY,2018-03,2019-03,Liquidating Assets,Reinvestor
+IOC,2013-03,2014-03,Mixed,Shareholder Returns
+IOC,2016-03,2017-03,Shareholder Returns,Reinvestor
+IOC,2018-03,2019-03,Reinvestor,Mixed
+IOC,2020-03,2021-03,Mixed,Shareholder Returns
+IOC,2021-03,2022-03,Shareholder Returns,Reinvestor
+IOC,2022-03,2023-03,Reinvestor,Shareholder Returns
+IRCTC,2015-03,2016-03,Reinvestor,Liquidating Assets
+IRCTC,2018-03,2019-03,Liquidating Assets,Shareholder Returns
+IRCTC,2019-03,2020-03,Shareholder Returns,Liquidating Assets
+IRCTC,2020-03,2021-03,Liquidating Assets,Reinvestor
+IRFC,2021-03,2022-03,Distress Signal,Growth Funded by Debt
+IRFC,2022-03,2023-03,Growth Funded by Debt,Distress Signal
+IRFC,2023-03,2024-03,Distress Signal,Reinvestor
+ITC,2020-03,2021-03,Reinvestor,Liquidating Assets
+ITC,2021-03,2022-03,Liquidating Assets,Reinvestor
+ITC,2023-03,2024-03,Reinvestor,Liquidating Assets
+JINDALSTEL,2015-03,2016-03,Mixed,Reinvestor
+JINDALSTEL,2020-03,2021-03,Reinvestor,Shareholder Returns
+JINDALSTEL,2023-03,2024-03,Shareholder Returns,Mixed
+JIOFIN,2023-03,2024-03,Shareholder Returns,Asset Sale Funded Repayment
+JSWENERGY,2019-03,2020-03,Shareholder Returns,Liquidating Assets
+JSWENERGY,2020-03,2021-03,Liquidating Assets,Shareholder Returns
+JSWENERGY,2022-03,2023-03,Shareholder Returns,Mixed
+JSWSTEEL,2013-03,2014-03,Shareholder Returns,Mixed
+JSWSTEEL,2014-03,2015-03,Mixed,Shareholder Returns
+JSWSTEEL,2015-03,2016-03,Shareholder Returns,Reinvestor
+JSWSTEEL,2016-03,2017-03,Reinvestor,Shareholder Returns
+JSWSTEEL,2018-03,2019-03,Shareholder Returns,Mixed
+JSWSTEEL,2020-03,2021-03,Mixed,Shareholder Returns
+JSWSTEEL,2021-03,2022-03,Shareholder Returns,Reinvestor
+JSWSTEEL,2022-03,2023-03,Reinvestor,Shareholder Returns
+JSWSTEEL,2023-03,2024-03,Shareholder Returns,Reinvestor
+KOTAKBANK,2013-03,2014-03,Mixed,Shareholder Returns
+KOTAKBANK,2014-03,2015-03,Shareholder Returns,Mixed
+KOTAKBANK,2017-03,2018-03,Mixed,Growth Funded by Debt
+KOTAKBANK,2018-03,2019-03,Growth Funded by Debt,Mixed
+KOTAKBANK,2019-03,2020-03,Mixed,Shareholder Returns
+KOTAKBANK,2020-03,2021-03,Shareholder Returns,Reinvestor
+KOTAKBANK,2021-03,2022-03,Reinvestor,Mixed
+KOTAKBANK,2022-03,2023-03,Mixed,Growth Funded by Debt
+KOTAKBANK,2023-03,2024-03,Growth Funded by Debt,Mixed
+LICI,2019-03,2020-03,Liquidating Assets,Shareholder Returns
+LICI,2020-03,2021-03,Shareholder Returns,Liquidating Assets
+LICI,2021-03,2022-03,Liquidating Assets,Distress Signal
+LICI,2022-03,2023-03,Distress Signal,Shareholder Returns
+LICI,2023-03,2024-03,Shareholder Returns,Reinvestor
+LODHA,2016-03,2017-03,Mixed,Shareholder Returns
+LODHA,2017-03,2018-03,Shareholder Returns,Mixed
+LODHA,2018-03,2019-03,Mixed,Growth Funded by Debt
+LODHA,2019-03,2020-03,Growth Funded by Debt,Liquidating Assets
+LODHA,2023-03,2024-03,Liquidating Assets,Mixed
+LT,2016-03,2017-03,Growth Funded by Debt,Mixed
+LT,2017-03,2018-03,Mixed,Distress Signal
+LT,2018-03,2019-03,Distress Signal,Growth Funded by Debt
+LT,2019-03,2020-03,Growth Funded by Debt,Mixed
+LT,2020-03,2021-03,Mixed,Shareholder Returns
+LT,2023-03,2024-03,Shareholder Returns,Liquidating Assets
+LTIM,2013-03,2014-03,Reinvestor,Liquidating Assets
+LTIM,2014-03,2015-03,Liquidating Assets,Reinvestor
+M&M,2014-03,2015-03,Growth Funded by Debt,Mixed
+M&M,2018-03,2019-03,Mixed,Growth Funded by Debt
+M&M,2020-03,2021-03,Growth Funded by Debt,Mixed
+M&M,2021-03,2022-03,Mixed,Reinvestor
+M&M,2022-03,2023-03,Reinvestor,Growth Funded by Debt
+MARUTI,2016-03,2017-03,Shareholder Returns,Reinvestor
+MARUTI,2020-03,2021-03,Reinvestor,Shareholder Returns
+MARUTI,2021-03,2022-03,Shareholder Returns,Reinvestor
+MOTHERSON,2014-03,2015-03,Shareholder Returns,Mixed
+MOTHERSON,2015-03,2016-03,Mixed,Reinvestor
+MOTHERSON,2016-03,2017-03,Reinvestor,Mixed
+MOTHERSON,2017-03,2018-03,Mixed,Reinvestor
+MOTHERSON,2018-03,2019-03,Reinvestor,Shareholder Returns
+MOTHERSON,2023-03,2024-03,Shareholder Returns,Mixed
+NAUKRI,2013-03,2014-03,Reinvestor,Mixed
+NAUKRI,2015-03,2016-03,Mixed,Reinvestor
+NAUKRI,2019-03,2020-03,Reinvestor,Liquidating Assets
+NAUKRI,2020-03,2021-03,Liquidating Assets,Mixed
+NESTLEIND,2013-12,2014-12,Shareholder Returns,Reinvestor
+NESTLEIND,2014-12,2015-12,Reinvestor,Shareholder Returns
+NESTLEIND,2015-12,2016-12,Shareholder Returns,Reinvestor
+NESTLEIND,2018-12,2019-12,Reinvestor,Liquidating Assets
+NESTLEIND,2019-12,2020-12,Liquidating Assets,Reinvestor
+NHPC,2013-03,2014-03,Reinvestor,Shareholder Returns
+NHPC,2014-03,2015-03,Shareholder Returns,Reinvestor
+NHPC,2015-03,2016-03,Reinvestor,Shareholder Returns
+NHPC,2018-03,2019-03,Shareholder Returns,Reinvestor
+NHPC,2019-03,2020-03,Reinvestor,Mixed
+NHPC,2020-03,2021-03,Mixed,Reinvestor
+NHPC,2023-03,2024-03,Reinvestor,Shareholder Returns
+NTPC,2013-03,2014-03,Mixed,Reinvestor
+NTPC,2015-03,2016-03,Reinvestor,Shareholder Returns
+NTPC,2016-03,2017-03,Shareholder Returns,Mixed
+NTPC,2020-03,2021-03,Mixed,Shareholder Returns
+ONGC,2013-03,2014-03,Shareholder Returns,Mixed
+ONGC,2014-03,2015-03,Mixed,Shareholder Returns
+ONGC,2017-03,2018-03,Shareholder Returns,Mixed
+ONGC,2018-03,2019-03,Mixed,Shareholder Returns
+PFC,2014-03,2015-03,Distress Signal,Growth Funded by Debt
+PFC,2016-03,2017-03,Growth Funded by Debt,Mixed
+PFC,2017-03,2018-03,Mixed,Distress Signal
+PFC,2018-03,2019-03,Distress Signal,Growth Funded by Debt
+PFC,2020-03,2021-03,Growth Funded by Debt,Distress Signal
+PFC,2021-03,2022-03,Distress Signal,Reinvestor
+PFC,2022-03,2023-03,Reinvestor,Growth Funded by Debt
+PIDILITIND,2016-03,2017-03,Reinvestor,Mixed
+PIDILITIND,2017-03,2018-03,Mixed,Liquidating Assets
+PIDILITIND,2018-03,2019-03,Liquidating Assets,Reinvestor
+PIDILITIND,2019-03,2020-03,Reinvestor,Liquidating Assets
+PIDILITIND,2020-03,2021-03,Liquidating Assets,Reinvestor
+PIDILITIND,2023-03,2024-03,Reinvestor,Shareholder Returns
+PNB,2013-03,2014-03,Pre-Revenue,Mixed
+PNB,2016-03,2017-03,Mixed,Liquidating Assets
+PNB,2017-03,2018-03,Liquidating Assets,Distress Signal
+PNB,2018-03,2019-03,Distress Signal,Growth Funded by Debt
+PNB,2020-03,2021-03,Growth Funded by Debt,Mixed
+PNB,2023-03,2024-03,Mixed,Growth Funded by Debt
+POWERGRID,2018-03,2019-03,Mixed,Shareholder Returns
+POWERGRID,2021-03,2022-03,Shareholder Returns,Liquidating Assets
+POWERGRID,2022-03,2023-03,Liquidating Assets,Shareholder Returns
+RECLTD,2015-03,2016-03,Distress Signal,Growth Funded by Debt
+RECLTD,2016-03,2017-03,Growth Funded by Debt,Reinvestor
+RECLTD,2017-03,2018-03,Reinvestor,Distress Signal
+RECLTD,2021-03,2022-03,Distress Signal,Growth Funded by Debt
+RELIANCE,2015-03,2016-03,Mixed,Reinvestor
+RELIANCE,2016-03,2017-03,Reinvestor,Mixed
+RELIANCE,2017-03,2018-03,Mixed,Shareholder Returns
+RELIANCE,2018-03,2019-03,Shareholder Returns,Mixed
+RELIANCE,2019-03,2020-03,Mixed,Shareholder Returns
+RELIANCE,2020-03,2021-03,Shareholder Returns,Mixed
+RELIANCE,2023-03,2024-03,Mixed,Shareholder Returns
+SBILIFE,2013-03,2014-03,Shareholder Returns,Reinvestor
+SBILIFE,2014-03,2015-03,Reinvestor,Shareholder Returns
+SBILIFE,2020-03,2021-03,Shareholder Returns,Mixed
+SBILIFE,2021-03,2022-03,Mixed,Shareholder Returns
+SBIN,2013-03,2014-03,Reinvestor,Mixed
+SBIN,2014-03,2015-03,Mixed,Reinvestor
+SBIN,2015-03,2016-03,Reinvestor,Mixed
+SBIN,2016-03,2017-03,Mixed,Reinvestor
+SBIN,2017-03,2018-03,Reinvestor,Distress Signal
+SBIN,2018-03,2019-03,Distress Signal,Cash Accumulator
+SBIN,2019-03,2020-03,Cash Accumulator,Mixed
+SBIN,2021-03,2022-03,Mixed,Shareholder Returns
+SBIN,2022-03,2023-03,Shareholder Returns,Growth Funded by Debt
+SBIN,2023-03,2024-03,Growth Funded by Debt,Reinvestor
+SHREECEM,2013-06,2014-06,Reinvestor,Shareholder Returns
+SHREECEM,2015-06,2016-03,Shareholder Returns,Reinvestor
+SHREECEM,2016-03,2017-03,Reinvestor,Shareholder Returns
+SHREECEM,2017-03,2018-03,Shareholder Returns,Mixed
+SHREECEM,2018-03,2019-03,Mixed,Shareholder Returns
+SHREECEM,2019-03,2020-03,Shareholder Returns,Mixed
+SHREECEM,2020-03,2021-03,Mixed,Shareholder Returns
+SHREECEM,2022-03,2023-03,Shareholder Returns,Reinvestor
+SHREECEM,2023-03,2024-03,Reinvestor,Shareholder Returns
+SHRIRAMFIN,2017-03,2018-03,Growth Funded by Debt,Distress Signal
+SHRIRAMFIN,2018-03,2019-03,Distress Signal,Growth Funded by Debt
+SHRIRAMFIN,2022-03,2023-03,Growth Funded by Debt,Distress Signal
+SHRIRAMFIN,2023-03,2024-03,Distress Signal,Growth Funded by Debt
+SIEMENS,2017-09,2018-09,Liquidating Assets,Reinvestor
+SIEMENS,2019-09,2020-09,Reinvestor,Liquidating Assets
+SIEMENS,2020-09,2021-09,Liquidating Assets,Reinvestor
+SUNPHARMA,2013-03,2014-03,Reinvestor,Mixed
+SUNPHARMA,2014-03,2015-03,Mixed,Reinvestor
+SUNPHARMA,2017-03,2018-03,Reinvestor,Shareholder Returns
+SUNPHARMA,2018-03,2019-03,Shareholder Returns,Reinvestor
+SUNPHARMA,2019-03,2020-03,Reinvestor,Shareholder Returns
+SUNPHARMA,2020-03,2021-03,Shareholder Returns,Liquidating Assets
+SUNPHARMA,2021-03,2022-03,Liquidating Assets,Shareholder Returns
+SUNPHARMA,2022-03,2023-03,Shareholder Returns,Mixed
+SUNPHARMA,2023-03,2024-03,Mixed,Reinvestor
+TATACONSUM,2013-03,2014-03,Cash Accumulator,Reinvestor
+TATACONSUM,2014-03,2015-03,Reinvestor,Shareholder Returns
+TATACONSUM,2015-03,2016-03,Shareholder Returns,Liquidating Assets
+TATACONSUM,2017-03,2018-03,Liquidating Assets,Reinvestor
+TATACONSUM,2018-03,2019-03,Reinvestor,Liquidating Assets
+TATACONSUM,2019-03,2020-03,Liquidating Assets,Shareholder Returns
+TATACONSUM,2021-03,2022-03,Shareholder Returns,Reinvestor
+TATACONSUM,2023-03,2024-03,Reinvestor,Mixed
+TATAMOTORS,2014-03,2015-03,Shareholder Returns,Mixed
+TATAMOTORS,2015-03,2016-03,Mixed,Shareholder Returns
+TATAMOTORS,2016-03,2017-03,Shareholder Returns,Mixed
+TATAMOTORS,2021-03,2022-03,Mixed,Reinvestor
+TATAMOTORS,2022-03,2023-03,Reinvestor,Shareholder Returns
+TATAPOWER,2016-03,2017-03,Shareholder Returns,Mixed
+TATAPOWER,2017-03,2018-03,Mixed,Shareholder Returns
+TATAPOWER,2020-03,2021-03,Shareholder Returns,Liquidating Assets
+TATAPOWER,2021-03,2022-03,Liquidating Assets,Shareholder Returns
+TATAPOWER,2022-03,2023-03,Shareholder Returns,Mixed
+TATAPOWER,2023-03,2024-03,Mixed,Shareholder Returns
+TATASTEEL,2013-03,2014-03,Reinvestor,Mixed
+TATASTEEL,2014-03,2015-03,Mixed,Reinvestor
+TATASTEEL,2017-03,2018-03,Reinvestor,Mixed
+TATASTEEL,2018-03,2019-03,Mixed,Shareholder Returns
+TATASTEEL,2021-03,2022-03,Shareholder Returns,Reinvestor
+TATASTEEL,2022-03,2023-03,Reinvestor,Shareholder Returns
+TATASTEEL,2023-03,2024-03,Shareholder Returns,Reinvestor
+TCS,2017-03,2018-03,Reinvestor,Liquidating Assets
+TCS,2020-03,2021-03,Liquidating Assets,Reinvestor
+TCS,2022-03,2023-03,Reinvestor,Liquidating Assets
+TECHM,2013-03,2014-03,Mixed,Liquidating Assets
+TECHM,2014-03,2015-03,Liquidating Assets,Reinvestor
+TECHM,2019-03,2020-03,Reinvestor,Liquidating Assets
+TECHM,2020-03,2021-03,Liquidating Assets,Shareholder Returns
+TECHM,2021-03,2022-03,Shareholder Returns,Liquidating Assets
+TECHM,2022-03,2023-03,Liquidating Assets,Reinvestor
+TECHM,2023-03,2024-03,Reinvestor,Shareholder Returns
+TITAN,2013-03,2014-03,Reinvestor,Growth Funded by Debt
+TITAN,2014-03,2015-03,Growth Funded by Debt,Reinvestor
+TITAN,2016-03,2017-03,Reinvestor,Shareholder Returns
+TITAN,2017-03,2018-03,Shareholder Returns,Asset Sale Funded Repayment
+TITAN,2018-03,2019-03,Asset Sale Funded Repayment,Reinvestor
+TITAN,2019-03,2020-03,Reinvestor,Asset Sale Funded Repayment
+TITAN,2020-03,2021-03,Asset Sale Funded Repayment,Shareholder Returns
+TITAN,2021-03,2022-03,Shareholder Returns,Asset Sale Funded Repayment
+TITAN,2022-03,2023-03,Asset Sale Funded Repayment,Mixed
+TITAN,2023-03,2024-03,Mixed,Reinvestor
+TORNTPHARM,2015-03,2016-03,Mixed,Shareholder Returns
+TORNTPHARM,2016-03,2017-03,Shareholder Returns,Reinvestor
+TORNTPHARM,2017-03,2018-03,Reinvestor,Mixed
+TORNTPHARM,2018-03,2019-03,Mixed,Shareholder Returns
+TORNTPHARM,2019-03,2020-03,Shareholder Returns,Liquidating Assets
+TORNTPHARM,2020-03,2021-03,Liquidating Assets,Shareholder Returns
+TORNTPHARM,2022-03,2023-03,Shareholder Returns,Mixed
+TORNTPHARM,2023-03,2024-03,Mixed,Shareholder Returns
+TRENT,2013-03,2014-03,Mixed,Pre-Revenue
+TRENT,2014-03,2015-03,Pre-Revenue,Growth Funded by Debt
+TRENT,2015-03,2016-03,Growth Funded by Debt,Shareholder Returns
+TRENT,2016-03,2017-03,Shareholder Returns,Reinvestor
+TRENT,2018-03,2019-03,Reinvestor,Mixed
+TRENT,2020-03,2021-03,Mixed,Liquidating Assets
+TRENT,2022-03,2023-03,Liquidating Assets,Shareholder Returns
+TRENT,2023-03,2024-03,Shareholder Returns,Reinvestor
+TVSMOTOR,2014-03,2015-03,Shareholder Returns,Mixed
+TVSMOTOR,2015-03,2016-03,Mixed,Shareholder Returns
+TVSMOTOR,2016-03,2017-03,Shareholder Returns,Reinvestor
+TVSMOTOR,2017-03,2018-03,Reinvestor,Mixed
+TVSMOTOR,2018-03,2019-03,Mixed,Growth Funded by Debt
+TVSMOTOR,2019-03,2020-03,Growth Funded by Debt,Mixed
+TVSMOTOR,2021-03,2022-03,Mixed,Growth Funded by Debt

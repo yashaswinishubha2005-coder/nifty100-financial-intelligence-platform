@@ -1,0 +1,9 @@
+company_id,metric_type,period_years,parsed_value_pct,computed_value_pct,divergence_pp,flagged
+SBILIFE,compounded_sales_growth,5,24.0,24.23,0.23,False
+SBILIFE,compounded_profit_growth,5,6.0,7.37,1.37,False
+TCS,compounded_sales_growth,5,10.0,10.46,0.46,False
+TCS,compounded_profit_growth,5,8.0,7.87,0.13,False
+HDFCBANK,compounded_sales_growth,5,22.0,21.95,0.05,False
+HDFCBANK,compounded_profit_growth,5,23.0,23.87,0.87,False
+INFY,compounded_sales_growth,5,13.0,13.2,0.2,False
+INFY,compounded_profit_growth,5,11.0,11.24,0.24,False
